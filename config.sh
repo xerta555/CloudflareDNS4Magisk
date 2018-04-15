@@ -22,13 +22,13 @@
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
-AUTOMOUNT=true
+AUTOMOUNT=false
 
 # Set to true if you need to load system.prop
-PROPFILE=false
+PROPFILE=true
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=true
+POSTFSDATA=false
 
 # Set to true if you need late_start service script
 LATESTARTSERVICE=true
@@ -41,7 +41,8 @@ LATESTARTSERVICE=true
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     CloudflareDNS4Magisk    "
+  ui_print "     CloudflareDNS4Magisk      "
+  ui_print "              2.6              "
   ui_print "     By Rom for Magisk v15+    "
   ui_print "*******************************"
 }
@@ -86,7 +87,6 @@ set_permissions() {
 
   # The following is default permissions, DO NOT remove
   set_perm_recursive  $MODPATH  0  0  0755  0644
-  set_perm  $MODPATH/system/etc/resolv.conf       0       0       0644
 }
 
 ##########################################################################################
@@ -99,3 +99,11 @@ set_permissions() {
 # difficult for you to migrate your modules to newer template versions.
 # Make update-binary as clean as possible, try to only do function calls in it.
 
+# Edit the resolv conf file if it exist
+resolve_conf() {
+	if [ -a /system/etc/resolv.conf ]; then
+		mkdir -p $MODPATH/system/etc/
+		printf "nameserver 1.1.1.1\nnameserver 1.0.0.1" >> $MODPATH/system/etc/resolv.conf
+		touch $MODPATH/auto_mount
+	fi
+}

@@ -1,4 +1,8 @@
-![alt text](https://image.ibb.co/e6OwXH/cloudflare.jpg "Logo CloudFareDNS4Magisk")
+<h1 align="center">
+<img src="https://image.ibb.co/e6OwXH/cloudflare.jpg">
+<br />
+<img src="https://img.shields.io/badge/XDA-Thread-yellow.svg?longCache=true&style=flat-square"></a><br /><img src="https://img.shields.io/badge/Status-Stable-green.svg?longCache=true&style=flat-square"alt="_time_stamp_" />
+
 
 Hello,
 
@@ -28,9 +32,6 @@ Please note that your web provider can purely block all requests if you use cust
 
 
 If you trust them, so you can install the module properly, restart and enjoy! 
-
-
-### XDA OP link (infos/updates/...): [XDA module Link](https://forum.xda-developers.com/apps/magisk/module-cloudfaredns4magisk-t3772375/)
 
 
 #### Speedtest with CF DNS servers:

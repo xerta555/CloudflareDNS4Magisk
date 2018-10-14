@@ -43,7 +43,7 @@ print_modname() {
   ui_print "*******************************"
   ui_print "     CloudflareDNS4Magisk      "
   ui_print "              2.6              "
-  ui_print "     By Rom for Magisk v15+    "
+  ui_print "     By Rom for Magisk v17+    "
   ui_print "*******************************"
 }
 
@@ -101,6 +101,8 @@ set_permissions() {
 
 # Edit the resolv conf file if it exist
 resolve_conf() {
+	mount /system 2>/dev/null
+	
 	if [ -a /system/etc/resolv.conf ]; then
 		mkdir -p $MODPATH/system/etc/
 		printf "nameserver 1.1.1.1\nnameserver 1.0.0.1" >> $MODPATH/system/etc/resolv.conf

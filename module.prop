@@ -5,5 +5,5 @@ versionCode=27
 author=Rom
 description=Using the new Cloudflare DNS system-lessy! As simple as that.
 updateJson=https://raw.githubusercontent.com/xerta555/CloudflareDNS4Magisk/master/update.json
-support=https://t.me/Detach_gms_apps
+support=https://forum.xda-developers.com/t/module-cloudflaredns4magisk.3772375/
 donate=https://www.paypal.com/paypalme/romfr

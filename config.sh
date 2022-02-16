@@ -105,7 +105,7 @@ resolve_conf() {
 	
 	if [ -a /system/etc/resolv.conf ]; then
 		mkdir -p $MODPATH/system/etc/
-		printf "nameserver 1.1.1.1\nnameserver 1.0.0.1" >> $MODPATH/system/etc/resolv.conf
+		printf "nameserver 1.1.1.1\nnameserver 1.0.0.1\nnameserver 2606:4700:4700::1111\nnameserver 2606:4700:4700::1001" >> $MODPATH/system/etc/resolv.conf
 		touch $MODPATH/auto_mount
 	fi
 }
